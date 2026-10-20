@@ -1,6 +1,16 @@
+import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
+import { Text } from "react-native";
 
 export default function RootLayout() {
+  const [fontsLoaded] = useFonts({
+    BitcountInk: require("../../assets/fonts/BitcountInk-VariableFont.ttf"),
+  });
+
+  if (!fontsLoaded) {
+    return <Text>Loading...</Text>;
+  }
+
   return (
     <Stack>
       <Stack.Screen name="index" options={{ title: "Screen 1" }} />
