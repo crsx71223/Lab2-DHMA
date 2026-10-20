@@ -4,7 +4,7 @@ import { StyleSheet, View } from "react-native";
 export default function NotFoundScreen() {
   return (
     <>
-      <Stack.Screen options={{ title: "Strona nie istnieje" }} />
+      <Stack.Screen options={{ title: "The page does not exist" }} />
       <View style={styles.container}>
         <Link href="/" style={styles.button}>
           No such page exists!

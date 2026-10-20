@@ -1,30 +1,34 @@
-import { Text, View, StyleSheet } from 'react-native';
-import { Link } from 'expo-router';
+import { Link } from "expo-router";
+import { StyleSheet, Text, View } from "react-native";
 
-export default function AboutScreen() {
+export default function Screen4() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>This is my screen with the personal data</Text>
+      <Text style={styles.text}>
+        You got lost chasing the noise and ended up back where you started!
+      </Text>
+
+      {/* This link loops back to Screen 1 (index) */}
       <Link href="/" style={styles.button}>
-        Return to the first screen
+        Return to start
       </Link>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: '#25292e',
-      justifyContent: 'center',
-      alignItems: 'center',
-    },
-    text: {
-      color: '#fff',
-    },
-    button: {
-        fontSize: 20,
-        textDecorationLine: 'underline',
-        color: '#fff',
-    },
-  });
+  container: {
+    flex: 1,
+    backgroundColor: "#25292e",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  text: {
+    color: "#fff",
+    fontSize: 18,
+    marginBottom: 20,
+    textAlign: "center",
+    paddingHorizontal: 20,
+  },
+  button: { fontSize: 20, textDecorationLine: "underline", color: "#fff" },
+});
